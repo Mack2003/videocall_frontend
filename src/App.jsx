@@ -23,7 +23,7 @@ function App() {
   };
 
   sockit.on('showVideo', data => {
-    videocall.srcObject = data;
+    console.log(data)
   });
 
   sockit.on('getmsg', data => {
