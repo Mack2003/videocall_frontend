@@ -14,7 +14,7 @@ function App() {
   const handelClick = () => {
     sockit.emit('message', 'hello')
     window.navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(chunks =>{
-      videoElement.src = chunks;
+      videoElement.srcObject = chunks;
     });
   };
 
