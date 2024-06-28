@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [videoElement, setVideoElement] = useState(undefined);
 
-  const sockit = io("http://localhost:5200");
+  const sockit = io("https://videochat-backend-36fr.onrender.com/");
   useEffect(()=>{
     setVideoElement(document.getElementById('video'));
   },[]);
@@ -17,6 +17,10 @@ function App() {
       videoElement.srcObject = chunks;
     });
   };
+
+  sockit.on('getmsg', data =>{
+    alert(`${data}`);
+  });
 
   return (
     <>
