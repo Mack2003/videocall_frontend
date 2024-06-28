@@ -23,7 +23,7 @@ function App() {
   };
 
   sockit.on('showVideo', data => {
-    console.log(data)
+    alert(data)
   });
 
   sockit.on('getmsg', data => {
